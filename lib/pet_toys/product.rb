@@ -15,7 +15,7 @@ class PetToys::Product
 	 	product.title = doc.search("div.product-title h1").text.strip 
 	 	product.price = doc.search("span#ProductPrice-product-template").text.strip
 	 	product.description = doc.search("div.description.rte span").text.strip
-	 	puts product.title, product.price, product.description 
+	 	product 
 	 end 
 
     

@@ -1,2 +1,7 @@
 #!/usr/bin/env ruby
+require "bundler/setup"
+require "pet_toys"
+
 puts " Welcome to my gem!"
+
+PetToys::CLI.new.call

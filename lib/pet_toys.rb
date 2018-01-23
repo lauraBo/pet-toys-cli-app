@@ -1,5 +1,4 @@
-require "pet_toys/version"
+require_relative "./pet_toys/version"
+require_relative "./pet_toys/cli"
 
-module PetToys
-  # Your code goes here...
-end
+

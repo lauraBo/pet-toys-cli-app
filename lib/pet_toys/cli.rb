@@ -3,7 +3,7 @@ class PetToys::CLI
 	def call
 		list
 		menu
-		exit 
+		
 	end 
 
 	
@@ -15,14 +15,16 @@ class PetToys::CLI
 
 
 	def menu
-		puts "Would you like to see more information? Type Yes to see more, or Exit to exit"
+		puts "Would you like to see more information? Type 'yes' to see more, or 'exit' to exit"
 		input = nil 
 		
 		while input != "exit"
 			input = gets.strip.downcase
 			if input == "yes"
 				puts @product.description 
-			else 
+			elsif input == "exit"
+				self.exit
+				else  
 				puts "that is not a valid response "
 			end
 		end

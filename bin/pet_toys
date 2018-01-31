@@ -2,6 +2,6 @@
 require "bundler/setup"
 require "pet_toys"
 
-puts " Welcome to my gem!"
+puts " Welcome to PetToys!"
 
 PetToys::CLI.new.call

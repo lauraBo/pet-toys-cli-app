@@ -4,12 +4,12 @@ class PetToys::Product
 	attr_accessor :title, :price, :description 
 
 	def self.get_products 
-		self.scrape_products
+		 << self.self.scrape_work_to_eat_toys 
 
 	end 
 
 
-	 def self.scrape_products
+	 def self.scrape_work_to_eat_toys 
 	 	doc = Nokogiri::HTML(open("https://storeforthedogs.com/collections/work-to-eat-toys/products/orbee-tuff-link"))
 	 	product = self.new 
 	 	product.title = doc.search("div.product-title h1").text.strip 

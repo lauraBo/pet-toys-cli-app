@@ -8,8 +8,9 @@ class PetToys::CLI
 
 	
 	def list
-		@product = PetToys::Product.get_products
-		puts "Product: #{@product.title} Price: #{@product.price}"
+		@products = PetToys::Product.get_products
+		@products.each.with_index(1) do |product, i|
+		puts "Product #{i}: #{product.title} Price: #{product.price}"
 
 	end
 
@@ -20,6 +21,10 @@ class PetToys::CLI
 		
 		while input != "exit"
 			input = gets.strip.downcase
+
+			if input.to_i > 0    #to check it's not a string
+				toy = @products[input.to_i-1]
+				puts toy.description 
 			if input == "yes"
 				puts @product.description 
 			elsif input == "exit"

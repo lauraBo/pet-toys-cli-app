@@ -6,7 +6,8 @@ class PetToys::Product
 	def self.get_products 
 
 		toys = []
-		toys  << self.self.scrape_work_to_eat_toy 
+		toys  << self.scrape_work_to_eat_toy
+		toys << self.scrape_soft_toy  
 
 		toys 
 

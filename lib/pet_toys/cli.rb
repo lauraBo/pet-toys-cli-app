@@ -17,7 +17,7 @@ class PetToys::CLI
 
 
 	def menu
-		puts "Would you like to see more information? Type 'yes' to see more, or 'exit' to exit"
+		puts "Would you like to see more information? Type '1' to see more details about the work-to-eat toy , or '2' to see more details about the soft toy. Type 'list' to see list again or 'exit' to leave."
 		input = nil 
 		
 		while input != "exit"
@@ -26,6 +26,10 @@ class PetToys::CLI
 			if input.to_i > 0    #to check it's not a string
 				toy = @products[input.to_i-1]
 				puts "#{toy.description}" 
+
+			elsif input == 'list'
+				list
+
 
 			elsif input == "exit"
 				self.exit

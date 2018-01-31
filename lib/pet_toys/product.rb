@@ -28,6 +28,9 @@ class PetToys::Product
  		product = self.new
  		product.title = doc.search("div.product-title h1").text.strip 
  		product.price = doc.search("span#ProductPrice-product-template").text.strip
- 		product.description = ("div.description.rte p").text.strip 
+ 		product.description = doc.search("div.description.rte").text.strip 
  		product 
+ 	end
+
+
 end 

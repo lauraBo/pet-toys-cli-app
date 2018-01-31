@@ -12,7 +12,8 @@ class PetToys::CLI
 		@products.each.with_index(1) do |product, i|
 		puts "Product #{i}: #{product.title} Price: #{product.price}"
 
-	end
+		end
+	end 
 
 
 	def menu
@@ -24,9 +25,8 @@ class PetToys::CLI
 
 			if input.to_i > 0    #to check it's not a string
 				toy = @products[input.to_i-1]
-				puts toy.description 
-			if input == "yes"
-				puts @product.description 
+				puts "#{toy.description}" 
+
 			elsif input == "exit"
 				self.exit
 				else  

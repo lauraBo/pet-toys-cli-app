@@ -8,11 +8,16 @@ class PetToys::CLI
 
 	
 	def list
+		puts "-------------------------------------"
+
 		@products = PetToys::Product.get_products
 		@products.each.with_index(1) do |product, i|
 		puts "Product #{i}: #{product.title} Price: #{product.price}"
 
+		puts "-------------------------------------"
+
 		end
+
 	end 
 
 
@@ -41,7 +46,16 @@ class PetToys::CLI
 	end
 
 	def exit
-		puts "this is the exit "
+		puts "Thanks for visiting!"
+		puts "			 __"
+		puts "			^ 0`--o	"
+		puts "  ,                   ,		"
+		puts " ((                   (  | __,'"
+		puts "  \\~----------------' \_;/"
+		puts "hjw (                  /"
+		puts "   /) ._______________.  )"
+		puts "   (( (           (( ("
+		puts "    ``-'           ``-'"
 	end
 
 end

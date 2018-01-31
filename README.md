@@ -1,8 +1,14 @@
 # PetToys
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pet_toys`. To experiment with that code, run `bin/console` for an interactive prompt.
+# Specifications for the CLI Assessment 
+ 
+ +Specs:
+ +- [x] Have a CLI for interfacing with the application
+ +- [x] Pull data from an external source
+ +- [x] Implement both list and detail views
 
-TODO: Delete this and the text above, and describe your gem
+
+This gem lists the two most popular work-to-eat and soft dog toys from 'School for the Dogs' online store. The user can select either toy from the list to see the product's description. 
 
 ## Installation
 
